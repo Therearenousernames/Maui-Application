@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessingGameMAUI.GamePlay"
+             BackgroundColor="White">
+    
+    <ScrollView>
+        <VerticalStackLayout 
+            Spacing="25" 
+            Padding="30"
+            VerticalOptions="Center">
+
+
+            <ImageButton
+                    x:Name="Quit"
+                    Source="icons8_close_window_48.png"
+                    SemanticProperties.Description="The dot net bot waving hello!"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Clicked="QuitAsync"
+                    SemanticProperties.HeadingLevel="Level1"/>
+
+
+            <Image 
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="The dot net bot waving hello!"
+                HeightRequest="150"
+                HorizontalOptions="Center"/>
+
+            
+            <Label 
+                FontSize="35" 
+                FontAttributes="Bold" 
+                Text="Number Guessing Game" 
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"/>
+
+            <Label
+                Text="Welcome to the Guess the Number Game"
+                FontSize="15"
+                FontAttributes="None"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Login description"
+                HorizontalOptions="Center"/>
+            
+
+            <!-- Login page elements -->
+            <Editor
+                x:Name="TextEditor"
+                Placeholder="Enter your username"
+                HeightRequest="15"
+                SelectionLength="10"/>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="5">
+                <Button 
+                    x:Name="RegisterButton"
+                    Text="Register"
+                    Clicked="RegisterAsync"
+                    SemanticProperties.Hint="Button to click to register"/>
+
+                <Button 
+                    Grid.Column="1"
+                    x:Name="LoginButton"
+                    Text="Login"
+                    Clicked="LoginAsync"
+                    SemanticProperties.Hint="Button to click to login"/>
+            </Grid>
+
+           
+
+            <!-- Menu label for the main page after login -->
+            <Label
+                x:Name="Menu"
+                Text="Menu"
+                FontSize="20"
+                FontAttributes="None"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Menu description"
+                HorizontalOptions="Center"/>
+
+            <!-- Displays the game id and all other relevant information -->
+            <Label
+                Text=""
+                x:Name="GameInformation"
+                FontSize="13"
+                FontAttributes="None"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Round information"
+                HorizontalOptions="Center"/>
+            
+
+            <!-- Play button for game play - it has elements that show when its pressed -->
+            <Button
+                x:Name="StartGame"
+                Text="Play"
+                SemanticProperties.Hint="Button to click to start game"
+                Clicked="StartAsync"
+                CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="DarkGreen"
+                BorderColor="DarkGreen"
+               />
+
+            
+            <!-- History button to get a list of the history -->
+            <Button
+                x:Name="History"
+                Text="View History"
+                SemanticProperties.Hint="Button to view user history"
+                Clicked="HistoryAsync"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="YellowGreen"
+                BorderColor="YellowGreen"
+                CornerRadius="15"
+               />
+            
+            <!-- Shows the results of the guess submitted by the user -->
+            <Label
+                x:Name="GuessResults"
+                Text=""
+                FontSize="15"
+                SemanticProperties.Description="Returns the results for the guess submitted"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                />
+            
+            
+            <!-- Game stats at the end of each round  // Probably going to refractor this more. -->
+            <Label
+                x:Name="GameStats"
+                Text=""
+                FontSize="15"
+                SemanticProperties.Description="Return the game statistics for the round"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"/>
+
+            <!-- Delete user button to delete user history and user from the database-->
+            <Button
+                x:Name="DeleteUser"
+                Text="Delete User"
+                SemanticProperties.Hint="Button to delete user"
+                Clicked="DeletUserAsync"
+                HorizontalOptions="FillAndExpand"
+                CornerRadius="15"
+                BackgroundColor="DarkRed"
+                BorderColor="DarkRed"/>
+            
+            <!-- Delete user's history leaving user behind -->
+            <Button
+                x:Name="DeleteUserHistory"
+                Text="Delete User's History"
+                SemanticProperties.Hint="Button to delete user history"
+                Clicked="DeletUserHistoryAsync"
+                HorizontalOptions="FillAndExpand"
+                CornerRadius="15"
+                BackgroundColor="DarkViolet"
+                BorderColor="DarkViolet"/>
+
+            <!-- History title-->
+            <Label
+                x:Name="UserHistoryTitle"
+                Text=""
+                FontSize="18"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="User history"
+                HorizontalOptions="Center"/>
+
+            <!-- Deleted user history message -->
+            <Label
+                Text=""
+                x:Name="DeletedMessage"
+                FontSize="15"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="User history"
+                HorizontalOptions="Center"
+                />
+
+            <!-- Message if no history -->
+            <Label
+                x:Name="NoHistory"
+                Text=""
+                FontSize="15"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="User history"
+                HorizontalOptions="Center"
+                />
+
+
+            <!-- Display history in a list -->
+            <CollectionView
+                x:Name="HistoryCollection"
+                ItemsSource="{Binding Data}"
+                Margin="20"
+                HorizontalOptions="Center"
+                SelectionMode="Single"
+                BackgroundColor="White">
+
+                <!-- Designate how the collection of items are laid out -->
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="0"/>
+                </CollectionView.ItemsLayout>
+
+                <!-- Define the appearence of each item in the list -->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label 
+                                Text="{Binding Message}" 
+                                FontSize="15"
+                                SemanticProperties.HeadingLevel="Level2"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Input box for the guess -->
+            <Editor
+                x:Name="Guess"
+                Placeholder="Enter your guess"
+                HeightRequest="15"
+                SelectionLength="10"
+                SemanticProperties.HeadingLevel="Level2"/>
+
+
+            <!-- Button to submit the guess -->
+            <Button
+                x:Name="Submit"
+                Text="Submit"
+                SemanticProperties.Hint="Button to submit guess"
+                Clicked="SubmitGuess"
+                CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                Background="DarkRed"
+                BorderColor="DarkRed"
+                SemanticProperties.HeadingLevel="Level2"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

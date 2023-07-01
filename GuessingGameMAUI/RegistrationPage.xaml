@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessingGameMAUI.RegistrationPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="10"
+        Padding="10"
+        VerticalOptions="Center">
+
+            <ImageButton
+                    x:Name="Quit"
+                    Source="icons8_close_window_48.png"
+                    Clicked="QuitAsync"
+                    SemanticProperties.Description="Close current page or close application depending on page"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    SemanticProperties.HeadingLevel="Level1"/>
+
+
+            <Label 
+                Text="Guess The Number" 
+                Style="{StaticResource FirstText}"/>
+
+            <Label Text="Welcome Onboard!"
+               Style="{StaticResource SecondText}"/>
+
+
+            <Image 
+            Source="young_people_posing2.jpg"
+             HeightRequest="400"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent"/>
+
+            <Label Text="Let's get you setup in a few easy steps"
+                   Style="{StaticResource ThirdText}"/>
+
+            <Editor
+            x:Name="FullName"
+            Placeholder="Enter your full name"
+            Style="{StaticResource TextEditorStyle}"/>
+  
+            <Editor
+                x:Name="TextEditor"
+                Placeholder="Enter your username" 
+                Style="{StaticResource TextEditorStyle}"/>
+
+            <Button 
+                x:Name="Submit"
+                Text="Submit"
+                Clicked="SumbitAsync"
+                SemanticProperties.Hint="Button to click to login"
+                Style="{StaticResource Button1}"
+                  />
+
+           
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

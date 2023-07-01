@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessingGameMAUI.ViewHistory">
+    <ScrollView
+        Margin="20">
+        <VerticalStackLayout
+        Spacing="15"
+        Padding="30"
+        VerticalOptions="Center">
+
+
+            <ImageButton
+                    x:Name="Quit"
+                    Source="icons8_close_window_48.png"
+                    SemanticProperties.Description="The dot net bot waving hello!"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Clicked="QuitAsync"
+                    SemanticProperties.HeadingLevel="Level1"/>
+
+            <Label 
+                Text="Guess The Number" 
+                Style="{StaticResource FirstText}"/>
+
+            <Image
+                 Source="man_checking.jpg"
+                HeightRequest="400"
+                HorizontalOptions="Center"/>
+
+            <!-- History title-->
+            <Label
+                x:Name="UserHistoryTitle"
+                Text=""
+                Style="{StaticResource SecondText}"
+                SemanticProperties.Description="User history"
+               />
+
+            <!-- Message if no history -->
+            <Label
+                x:Name="NoHistory"
+                Text=""
+                SemanticProperties.Description="User history"
+                Style="{StaticResource ThirdText}"
+                />
+
+            <!-- Display history in a list -->
+            <CollectionView
+                x:Name="HistoryCollection"
+                ItemsSource="{Binding Data}"
+                Margin="10"
+                HorizontalOptions="Center"
+                SelectionMode="Single"
+                BackgroundColor="White">
+
+                <!-- Designate how the collection of items are laid out -->
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="0"/>
+                </CollectionView.ItemsLayout>
+
+                <!-- Define the appearence of each item in the list -->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label 
+                                Text="{Binding Message}" 
+                                FontSize="12"
+                                SemanticProperties.HeadingLevel="Level2"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Delete user's history leaving user behind -->
+            <Button
+                x:Name="DeleteUserHistory"
+                Text="Delete User's History"
+                SemanticProperties.Hint="Button to delete user history"
+                Clicked="DeletUserHistoryAsync"
+                Style="{StaticResource Button2}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

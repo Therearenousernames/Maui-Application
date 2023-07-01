@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GuessingGameMAUI
+build_property.ProjectDir = C:\Users\njomo\mauiapplication\GuessingGameMAUI\
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/GamePlay.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.GamePlay.xaml
+build_metadata.AdditionalFiles.TargetPath = GamePlay.xaml
+build_metadata.AdditionalFiles.RelativePath = GamePlay.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/HelpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.HelpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = HelpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = HelpPage.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/InformationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.InformationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = InformationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = InformationPage.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/Menu.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.Menu.xaml
+build_metadata.AdditionalFiles.TargetPath = Menu.xaml
+build_metadata.AdditionalFiles.RelativePath = Menu.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/RegistrationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.RegistrationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegistrationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegistrationPage.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/Start.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.Start.xaml
+build_metadata.AdditionalFiles.TargetPath = Start.xaml
+build_metadata.AdditionalFiles.RelativePath = Start.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/ThemeResources/DarkTheme.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.ThemeResources.DarkTheme.xaml
+build_metadata.AdditionalFiles.TargetPath = ThemeResources\DarkTheme.xaml
+build_metadata.AdditionalFiles.RelativePath = ThemeResources\DarkTheme.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/ThemeResources/LightTheme.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.ThemeResources.LightTheme.xaml
+build_metadata.AdditionalFiles.TargetPath = ThemeResources\LightTheme.xaml
+build_metadata.AdditionalFiles.RelativePath = ThemeResources\LightTheme.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/ThemeResources/WhiteTheme.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.ThemeResources.WhiteTheme.xaml
+build_metadata.AdditionalFiles.TargetPath = ThemeResources\WhiteTheme.xaml
+build_metadata.AdditionalFiles.RelativePath = ThemeResources\WhiteTheme.xaml
+
+[C:/Users/njomo/mauiapplication/GuessingGameMAUI/ViewHistory.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuessingGameMAUI.ViewHistory.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewHistory.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewHistory.xaml

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GuessingGameMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GuessingGameMAUI"
+    Shell.FlyoutBehavior="Disabled"
+    BackgroundColor="White">
+   
+
+    <!-- Login page -->
+    <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}"
+            Route="MainPage"/>
+    
+    <!-- Menu page -->
+    <TabBar>
+        <Tab Title="Settings" Icon="setting.png">
+            <ShellContent Icon="setting.png"
+                          Title ="Settings"
+                          ContentTemplate="{DataTemplate local:SettingsPage}"
+                          Route="settings"/>
+        </Tab>
+        <Tab Title="Information" Icon="information.png">
+            <ShellContent Icon="information.png"
+                          Title="Information"
+                          ContentTemplate="{DataTemplate local:InformationPage}"
+                          Route="information"/>
+        </Tab>
+    </TabBar>
+
+    
+
+</Shell>

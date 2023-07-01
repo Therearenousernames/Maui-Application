@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessingGameMAUI.Start"
+             BackgroundColor="White">
+
+    <ScrollView 
+        Margin="20">
+        <VerticalStackLayout
+        Spacing="15" 
+        Padding="20"
+        VerticalOptions="Center">
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="End"
+                         Padding="20"
+                         Margin="20">
+                <ImageButton
+                    x:Name="Information"
+                    Source="information.png"
+                    Clicked="InformationAsync"
+                    SemanticProperties.Description="Close current page or close application depending on page"
+                    HeightRequest="16"
+                    HorizontalOptions="End"
+                    SemanticProperties.HeadingLevel="Level1"/>
+
+                <ImageButton
+                    x:Name="Quit"
+                    Source="icons8_close_window_48.png"
+                    SemanticProperties.Description="The dot net bot waving hello!"
+                    HeightRequest="18"
+                    HorizontalOptions="End"
+                    Clicked="QuitAsync"
+                    SemanticProperties.HeadingLevel="Level1"/>
+            </StackLayout>
+
+
+            <Label 
+                Text="Guess The Number" 
+                Style="{StaticResource FirstText}"/>
+
+
+            <Image
+                 Source="three_people_bulbs.jpg"
+                HeightRequest="400"
+                HorizontalOptions="Center"/>
+
+
+            <!-- Displays the game id and all other relevant information -->
+            <Label
+                Text=""
+                x:Name="GameInformation"
+                Style="{StaticResource SecondText}"
+                SemanticProperties.Description="Round information"
+                HorizontalOptions="Center"/>
+
+            <!-- Shows the results of the guess submitted by the user -->
+            <Label
+                x:Name="GuessResults"
+                Text=""
+                FontSize="12"
+                Style="{StaticResource ThirdText}"
+                />
+
+            <!-- Input box for the guess -->
+            <Editor
+                x:Name="Guess"
+                Placeholder="Enter your guess"
+                Style="{StaticResource TextEditorStyle}"/>
+
+
+            <!-- Button to submit the guess -->
+            <Button
+                x:Name="Submit"
+                Text="Submit"
+                SemanticProperties.Hint="Button to submit guess"
+                Clicked="SubmitGuess"
+                Style="{StaticResource Button2}"/>
+
+
+            <!-- Game stats at the end of each round  // Probably going to refractor this more. -->
+            <Label
+                x:Name="GameStats"
+                Text=""
+                SemanticProperties.Description="Return the game statistics for the round"
+                Style="{StaticResource ThirdText}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

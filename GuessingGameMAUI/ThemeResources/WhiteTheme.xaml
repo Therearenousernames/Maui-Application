@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessingGameMAUI.ThemeResources.WhiteTheme">
+
+    <!--  Light Grey  -->
+    <Color x:Key="PrimaryColor">#f0f0f0</Color>
+
+    <!--  Medium Grey  -->
+    <Color x:Key="PrimaryDarkColor">#d2d2d2</Color>
+
+    <!--  Dark Grey  -->
+    <Color x:Key="PrimaryTintColor">#1d1d1d</Color>
+
+    <!--  White  -->
+    <Color x:Key="PageBackgroundColor">#FFFFFF</Color>
+
+    <!--  Light Grey  -->
+    <Color x:Key="NavigationBarColor">#f0f0f0</Color>
+
+    <!--  Dark Grey  -->
+    <Color x:Key="PrimaryTextColor">#3f3f3f</Color>
+
+    <!--  Mid Grey  -->
+    <Color x:Key="SecondaryTextColor">#6e6e6e</Color>
+
+    <!--  Mid-Light Grey  -->
+    <Color x:Key="SubTextColor">#969696</Color>
+
+    <!--  White  -->
+    <Color x:Key="OverlayTextColor">#FFFFFF</Color>
+
+    <!--  Transperant Black  -->
+    <Color x:Key="TransperantBackgroundColor">#56000000</Color>
+
+    <!--  Silver Light Grey  -->
+    <Color x:Key="SeparatorLineColor">#ececec</Color>
+
+</ResourceDictionary>

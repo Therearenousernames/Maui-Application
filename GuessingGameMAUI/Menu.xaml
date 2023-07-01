@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessingGameMAUI.Menu"
+             BackgroundColor="White">
+   
+    <ScrollView
+
+        Margin="20">
+        <VerticalStackLayout
+        Spacing="15"
+        Padding="20"
+        VerticalOptions="Center">
+            
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="End"
+                         Padding="20"
+                         Margin="20"
+                         Spacing="10">
+                <ImageButton
+                    x:Name="Settings"
+                    Source="setting.png"
+                    Clicked="SettingsAsync"
+                    ToolTipProperties.Text="Close current page"
+                    SemanticProperties.Description="Close current page or close application depending on page"
+                    HeightRequest="16"
+                    HorizontalOptions="End"
+                    SemanticProperties.HeadingLevel="Level1"/>
+
+                <ImageButton
+                    x:Name="Quit"
+                    Source="icons8_close_window_48.png"
+                    ToolTipProperties.Text="Go to the settings page"
+                    HeightRequest="18"
+                    HorizontalOptions="End"
+                    Clicked="QuitAsync"
+                    SemanticProperties.HeadingLevel="Level1"/>
+            </StackLayout>
+
+
+
+           
+
+            <Label 
+                Text="Guess The Number" 
+                Style="{StaticResource FirstText}"/>
+
+            <Image
+                 Source="yellow_question_mark.jpg"
+                HeightRequest="400"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent" />
+            
+
+            <!-- Play button for game play - it has elements that show when its pressed -->
+            <Button
+                x:Name="StartGame"
+                Text="Play"
+                SemanticProperties.Hint="Button to click to start game"
+                Clicked="StartAsync"
+                Style="{StaticResource Button2}"/>
+
+
+
+  
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

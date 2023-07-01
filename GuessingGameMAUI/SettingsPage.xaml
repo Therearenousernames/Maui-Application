@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessingGameMAUI.SettingsPage"
+             BackgroundColor="White">
+    
+    <ScrollView
+        Margin="20">
+        <VerticalStackLayout
+            Spacing="15"
+            Padding="20"
+            VerticalOptions="Center">
+
+            <ImageButton
+                    x:Name="Quit"
+                    Source="icons8_close_window_48.png"
+                    Clicked="QuitAsync"
+                    SemanticProperties.Description="Close current page or close application depending on page"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    SemanticProperties.HeadingLevel="Level1"/>
+
+            <Label 
+            Text="Settings"
+            Style="{StaticResource FirstText}"/>
+
+            <Image
+                Source="cog_wheel.jpg"
+                HeightRequest="400"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent"/>
+
+            <Label
+                x:Name="Allowances"
+                Text=""
+                Style="{StaticResource ThirdText}"/>
+
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="10"
+                         Spacing="15">
+
+                <!-- History button to get a list of the history -->
+                <Button  
+                x:Name="History"
+                Text="View History"
+                SemanticProperties.Hint="Button to view user history"
+                Clicked="HistoryAsync"
+                Style="{StaticResource Button2}"/>
+
+                <!-- Delete user button to delete user history and user from the database-->
+                <Button
+                x:Name="DeleteUser"
+                Text="Delete User"
+                SemanticProperties.Hint="Button to delete user"
+                Clicked="DeletUserAsync"
+                Style="{StaticResource Button2}"/>
+
+
+
+            </StackLayout>
+           
+        </VerticalStackLayout>
+
+        
+    </ScrollView>
+</ContentPage>
